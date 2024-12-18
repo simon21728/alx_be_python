@@ -1,35 +1,33 @@
-def main():
-    # Prompt the user for task details
+def daily_reminder():
+    # Prompt user for task details
     task = input("Enter your task: ")
     priority = input("Priority (high/medium/low): ").lower()
     time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-    # Start building the reminder message
-    reminder = f"Reminder: '{task}'"
-
-    # Use match case to determine the priority level
+    # Handle task priority using match case
     match priority:
         case "high":
-            reminder += " is a high priority task"
+            reminder_message = f"'{task}' is a high priority task."
         case "medium":
-            reminder += " is a medium priority task"
+            reminder_message = f"'{task}' is a medium priority task."
         case "low":
-            reminder += " is a low priority task"
+            reminder_message = f"'{task}' is a low priority task."
         case _:
-            reminder += " has an invalid priority level. Please choose 'high', 'medium', or 'low'."
+            reminder_message = "Invalid priority level."
 
-    # Modify reminder based on whether the task is time-bound
+    # Modify message based on time-sensitivity
     if time_bound == "yes":
-        reminder += " that requires immediate attention today!"
+        reminder_message += " It requires immediate attention today!"
     elif time_bound == "no":
-        reminder += ". Consider completing it when you have free time."
+        reminder_message += " Consider completing it when you have free time."
     else:
-        reminder += " (Invalid input for time-bound status)."
+        reminder_message += " Invalid input for time-bound."
 
-    # Output the final reminder
-    print(reminder)
+    # Print the final reminder message
+    print("\nReminder:", reminder_message)
 
-# Run the daily reminder script
-if __name__ == "__main__":
-    main()
+
+# Call the function to run the reminder
+daily_reminder()
+
 
