@@ -1,5 +1,3 @@
-# Start of the script
-
 # Prompt for a single task
 task = input("Enter your task: ")
 
@@ -29,8 +27,6 @@ else:
     reminder_message += " Invalid input for time-bound."
 
 # Print the final reminder message
-print("\nReminder:", reminder_message)
-
-# End of the script
+print(f"Reminder: {reminder_message}")
 
 
