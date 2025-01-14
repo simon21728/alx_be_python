@@ -5,7 +5,7 @@ def safe_divide(numerator, denominator):
         denominator = float(denominator)
         
         # Perform the division and return the result
-        return numerator / denominator
+        return numerator/denominator
     
     except ValueError:
         # Handle non-numeric input
