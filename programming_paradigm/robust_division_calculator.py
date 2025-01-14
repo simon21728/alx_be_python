@@ -1,11 +1,13 @@
+
 def safe_divide(numerator, denominator):
     try:
-        # Attempt to convert the inputs to floats and perform division
+        # Attempt to convert the inputs to floats
         numerator = float(numerator)
         denominator = float(denominator)
         
-        # Perform the division and return the result
-        return numerator/denominator
+        # Perform the division and return the result with proper message
+        result = numerator / denominator
+        return f"The result of the division is {result:.1f}"
     
     except ValueError:
         # Handle non-numeric input
